@@ -37,25 +37,25 @@ public class User {
 
     /** 名前。20桁。null不許可 */
     @Column(length = 20, nullable = false)
-    @NotEmpty // 追加
-    @Length(max=20) // 追加
+    @NotEmpty
+    @Length(max=20)
     private String name;
 
     /** 性別。2桁。列挙型（文字列） */
     @Column(length = 2)
     @Enumerated(EnumType.STRING)
-    @NotNull // 追加
+    @NotNull
     private Gender gender;
 
     /** 年齢 */
-    @Min(0) // 追加
-    @Max(120) // 追加
+    @Min(0)
+    @Max(120)
     private Integer age;
 
     /** メールアドレス。50桁。null許可 */
     @Column(length = 50)
-    @Email // 追加
-    @Length(max=50) // 追加
+    @Email
+    @Length(max=50)
     private String email;
 
     /** OneToOneでリレーションを指定している */
